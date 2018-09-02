@@ -1,3 +1,15 @@
+<?php include 'style.php'; ?>
+<div class="jumbotron">
+  
+  <h1>WordFrequency<span class="glyphicon glyphicon-search" aria-hidden="true"></span></h1>
+  	<p> O analisador de palavras	</p>
+  
+
+  <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Ler mais</a></p> -->
+</div>
+
+
+
 <?php 
 //include 'text.php';
 $texto  = $_POST['texto'];
