@@ -38,15 +38,19 @@ $texto = str_replace("-->","", $texto);
 $texto = str_replace("->","", $texto);
 $texto = str_replace(".'","", $texto); 
 $texto = str_replace(".","", $texto);
-
+$texto = str_replace("\n", " ", $texto);
 for ($i=0; $i < 100; $i++) { 
 	# code...
 	$texto = str_replace("$i","", $texto);
+
+
 }
 
 
 
 $partes = explode(' ', $texto);
+
+
 echo "Palavra : Ocorrencias";
 echo "<br>";
 $palavras = array();
