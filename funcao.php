@@ -1,5 +1,7 @@
 <?php 
-include 'text.php';
+//include 'text.php';
+$texto  = $_POST['texto'];
+
 include 'style.php';
 /*$texto ="Take all I have in these hands
  And multiply, God, all that I am 
@@ -62,11 +64,21 @@ echo "
 ";
 
 $partes = explode(' ', $texto);
+//limpar arrays nulos 
+$partes = array_filter($partes);
+
+
+
 foreach ($partes as $key => $value) {
+	
+	
 	$ocorrencias = substr_count($texto, $value);
 	$totalDePalavras = count($partes);
 	$percentFrequencia = $ocorrencias / $totalDePalavras;
 	
+		
+
+
 	echo "
 		<tbody>
 			<tr>
@@ -80,38 +92,6 @@ foreach ($partes as $key => $value) {
 	";
 }
 echo "</table>";
-
-
-/*echo "Palavra : Ocorrencias";
-echo "<br>";*/
-/*$palavras = array();
-foreach ($partes as $key => $value) {
-
-
-	if (!in_array($value, $palavras)){
-		
-		$ocorrencias = substr_count($texto, $value);
-		$palavras[$value]=$ocorrencias;
-		
-		echo "$key-$value-$ocorrencias"; 
-		echo "<br>";
-	}
-}
-*/
-
-
-/*echo "=================";
-echo "<pre>";
-print_r($partes);
-*/
-
-// foreach ($palavras as $key => $value) {
-// 	if ($value>2 and $value<15) {
-// 		//echo "$key -  $value <br>";
-// 		echo "$key <br>";
-// 	}
-	
-// }
 
 
 ?>
