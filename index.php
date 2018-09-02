@@ -55,19 +55,25 @@ echo "
 		   <tr>
 		      <th scope='col'>ID</th>
 		      <th scope='col'>Palavra</th>
-		      <th scope='col'> % </th>		      
+		      <th scope='col'>Frequência</th>
+		      <th scope='col'> Percentual de Frequencia </th>		      
 		    </tr>
 	    </thead>
 ";
 
 $partes = explode(' ', $texto);
 foreach ($partes as $key => $value) {
+	$ocorrencias = substr_count($texto, $value);
+	$totalDePalavras = count($partes);
+	$percentFrequencia = $ocorrencias / $totalDePalavras;
+	
 	echo "
 		<tbody>
 			<tr>
 				<td>$key</td>
 				<td>$value</td>
-				<td>?</td>
+				<td>$ocorrencias</td>
+				<td>% $percentFrequencia </td>
 			</tr>
 		</tbody>
 	
