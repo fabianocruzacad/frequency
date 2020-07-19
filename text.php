@@ -1,5 +1,5 @@
 <?php 
-
+//texto para teste
 $texto = "
 I try to hold on to this world with everything I have
 But I feel the weight of what it brings, and the hurt that tries to grab
