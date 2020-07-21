@@ -40,9 +40,5 @@ He'll wipe away the tears, He'll wipe away the tears
 There will be a day
 Songwriters: Jeremy Camp
 
-
-
-
 ";
-
- ?>
+?>
