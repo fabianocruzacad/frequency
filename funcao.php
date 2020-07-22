@@ -43,7 +43,7 @@ foreach ($partes as $key => $value) {
 	$ocorrencias = substr_count($texto, $value);
 	$totalDePalavras = count($partes);
 	$percentFrequencia = ($ocorrencias / $totalDePalavras)*100;
-	
+	$percentFrequencia = number_format($percentFrequencia,'2');
 
 	echo "
 		<tbody>
